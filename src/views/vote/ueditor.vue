@@ -90,8 +90,8 @@
 
             this.ue.ready(() => {
               this.ueContent = this.ue.getContent()
-              if(!this.ueContent){
-                const h = this.$createElement;
+              if (!this.ueContent) {
+                const h = this.$createElement
                 this.$msgbox({
                   title: '消息',
                   message: h('p', null, [
@@ -102,16 +102,15 @@
                   confirmButtonText: '确定',
                   beforeClose: (action, instance, done) => {
                     if (action === 'confirm') {
-                      done();
+                      done()
                     } else {
-                      done();
+                      done()
                     }
                   }
                 }).then(action => {
 
-                });
-              }else{
-
+                })
+              } else {
                 this.$http({
                   url: this.$http.adornUrl('/activity/save'),
                   method: 'post',
@@ -128,7 +127,6 @@
                     this.$message.error(data.msg)
                   }
                 })
-
               }
             })
           } else {

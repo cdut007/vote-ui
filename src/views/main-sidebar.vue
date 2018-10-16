@@ -19,10 +19,10 @@
             <icon-svg name="editor" class="site-sidebar__menu-icon"></icon-svg>
             <span slot="title">创建投票</span>
           </el-menu-item>
-          <!--<el-menu-item index="demo-echarts" @click="$router.push({ name: 'demo-echarts' })">-->
-            <!--<icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>-->
-            <!--<span slot="title">查看投票</span>-->
-          <!--</el-menu-item>-->
+          <el-menu-item index="activity-list" @click="$router.push({ name: 'activity-list' })">
+            <icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>
+            <span slot="title">编辑投票</span>
+          </el-menu-item>
 
         </el-submenu>
         <sub-menu
