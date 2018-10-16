@@ -8,11 +8,11 @@
       </el-form-item>
       <el-form-item label="活动时间" required>
         <el-col :span="11">
-          <el-date-picker type="date" placeholder="选择开始时间" v-model="form.begin" style="width: 100%;"></el-date-picker>
+          <el-date-picker type="datetime" placeholder="选择开始时间" v-model="form.begin" style="width: 100%;"></el-date-picker>
         </el-col>
         <el-col class="line" :span="2" style="text-align:center"> - </el-col>
         <el-col :span="11">
-          <el-time-picker type="fixed-time" placeholder="选择结束时间" v-model="form.end" style="width: 100%;"></el-time-picker>
+          <el-date-picker type="datetime" placeholder="选择结束时间" v-model="form.end" style="width: 100%;"></el-date-picker>
         </el-col>
       </el-form-item>
       <el-form-item label="活动与奖品介绍">
@@ -112,10 +112,23 @@
                 });
               }else{
 
-                this.$message({
-                  type: 'info',
-                  message: this.ueContent
-                });
+                this.$http({
+                  url: this.$http.adornUrl('/activity/save'),
+                  method: 'post',
+                  data: this.$http.adornData({
+                    'content': this.ueContent,
+                    'subject': this.form.subject,
+                    'begin': this.form.begin,
+                    'end': this.form.end
+                  })
+                }).then(({data}) => {
+                  if (data && data.code === 0) {
+                    this.$message('创建活动成功!');
+                  } else {
+                    this.$message.error(data.msg)
+                  }
+                })
+
               }
             })
           } else {
