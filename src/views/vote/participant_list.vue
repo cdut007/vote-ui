@@ -8,7 +8,8 @@
           <div style="padding: 14px;">
             <span>{{item.username}}</span>
             <div class="bottom clearfix">
-              <el-button type="text" class="button" @click="edit(item)">编辑</el-button>
+              <span style="color: red">票数:{{item.count}}</span>
+              <!--<el-button type="text" class="button" @click="edit(item)">编辑</el-button>-->
             </div>
           </div>
         </el-card>
@@ -69,7 +70,8 @@
         method: 'get',
         params: this.$http.adornParams({
           'limit': 100,
-          'order': 'createTime'
+          'order': 'createTime',
+          'activityId': this.$route.params.activity.id
         })
       }).then(({data}) => {
         if (data && data.code === 0) {
