@@ -1,6 +1,8 @@
 <template>
 
   <div class="mod-activity-list">
+    <el-button type="primary" @click="create()" icon="el-icon-circle-plus-outline">添加选手</el-button>
+
     <el-row :gutter="20">
       <el-col  :span="6" v-for="item in player_list" :key="o">
         <el-card :body-style="{ padding: '4px'}" >
@@ -87,6 +89,9 @@
       },
       edit (item) {
         this.$router.push({ name: 'vote-ueditor-edit' , params: {participant: item}})
+      },
+      create () {
+        this.$router.push({ name: 'create-participant' , params: {activity: this.$route.params.activity}})
       }
     }
   }
