@@ -76,7 +76,8 @@
         method: 'get',
         params: this.$http.adornParams({
           'limit': 100,
-          'order': 'createTime'
+          'sidx': 'createTime',
+          'order': 'ASC'
         })
       }).then(({data}) => {
         if (data && data.code === 0) {
@@ -103,7 +104,7 @@
               confirmButtonText: '复制',
               callback: action => {
 
-                var clipBoardContent="http://"+window.location.hostname+"?key="+data.activity.shortUrlKey;
+                var clipBoardContent="http://"+window.location.hostname+"/mobile?key="+data.activity.shortUrlKey;
                 if(document.execCommand){
                   document.getElementById('copytext').value=clipBoardContent;
                   console.log("text=="+document.getElementById('copytext').value);
