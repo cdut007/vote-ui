@@ -64,6 +64,11 @@
         activity_list:[]
       }
     },
+    computed: {
+      userId: {
+        get () { return this.$store.state.user.id }
+      }
+    },
     filters:{
       formatDate(time){
         let date = new Date(time);
@@ -77,7 +82,8 @@
         params: this.$http.adornParams({
           'limit': 100,
           'sidx': 'createTime',
-          'order': 'ASC'
+          'order': 'ASC',
+          'createrId': this.userId
         })
       }).then(({data}) => {
         if (data && data.code === 0) {

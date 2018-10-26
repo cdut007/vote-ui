@@ -10,7 +10,7 @@
           <div style="padding: 14px;">
             <span>{{item.username}}</span>
             <div class="bottom clearfix">
-              <span style="color: red">票数:{{item.count}}</span>
+              <span style="color: red">票数:{{item.voteCount}}</span>
               <!--<el-button type="text" class="button" @click="edit(item)">编辑</el-button>-->
             </div>
           </div>
