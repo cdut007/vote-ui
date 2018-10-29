@@ -23,6 +23,10 @@
             <icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>
             <span slot="title">编辑投票</span>
           </el-menu-item>
+          <el-menu-item index="gift-list" @click="$router.push({ name: 'gift-list' })">
+            <icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>
+            <span slot="title">查看礼物</span>
+          </el-menu-item>
 
         </el-submenu>
         <sub-menu

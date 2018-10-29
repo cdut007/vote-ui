@@ -37,6 +37,8 @@ const mainRoutes = {
     { path: '/theme', component: _import('common/theme'), name: 'theme', meta: { title: '主题' } },
     { path: '/vote-echarts', component: _import('vote/echarts'), name: 'vote-echarts', meta: { title: 'vote-echarts', isTab: true } },
     { path: '/activity-list', component: _import('vote/activity_list'), name: 'activity-list', meta: { title: '查看活动列表', isTab: true } },
+    { path: '/gift-list', component: _import('vote/gift_list'), name: 'gift-list', meta: { title: '查看礼物列表', isTab: true } },
+    { path: '/giftitem-list', component: _import('vote/giftitem_list'), name: 'giftitem-list', meta: { title: '查看礼物详情', isTab: true } },
     { path: '/participant-list', component: _import('vote/participant_list'), name: 'participant-list', meta: { title: '选手列表', isTab: true } },
     { path: '/create-participant', component: _import('vote/create_participant'), name: 'create-participant', meta: { title: '添加选手', isTab: true } },
     { path: '/vote-ueditor', component: _import('vote/ueditor'), name: 'vote-ueditor', meta: { title: '创建投票活动', isTab: true } },
