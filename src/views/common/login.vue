@@ -3,7 +3,7 @@
     <div class="site-content__wrapper">
       <div class="site-content">
         <div class="brand-info">
-          <h2 class="brand-info__text">投票制作系统</h2>
+          <h2 class="brand-info__text">爱特联投票制作系统</h2>
           <p class="brand-info__intro">提供一套更优的投票解决方案。</p>
         </div>
        <div class="login-main">
