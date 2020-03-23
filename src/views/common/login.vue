@@ -69,7 +69,7 @@
          </el-tabs>
          <footer style="margin-top: 30%">
            <el-row :gutter="20">
-             <el-col :span="12" :offset="6"><a href="http://www.kuaidi.com" target="_blank" style="margin-left: 20%;text-decoration: underline">快递查询接口</a></el-col>
+             <el-col :span="12" :offset="6"><a href="https://m.kuaidi100.com" target="_blank" style="margin-left: 20%;text-decoration: underline">快递查询</a></el-col>
            </el-row>
 
          </footer>
